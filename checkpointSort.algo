@@ -1,0 +1,15 @@
+ALGORITHM Tri_Insertion
+VAR
+ i, j, aux : INTEGER;
+ tab : ARRAY_OF INTEGER;
+BEGIN
+FOR i FROM 0 TO tab.length-1 DO
+aux := tab[1];
+j:=i;
+WHILE ((j>0)&&(aux<tab[i])) DO
+    tab[j+1] := tab[i]
+    j:=j-1;
+END_WHILE
+tab[j+1] := aux;
+END_FOR
+END
